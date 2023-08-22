@@ -134,7 +134,7 @@ jobs:
         git clone https://github.com/oppo-source/android_kernel_modules_oppo_mtk5g
         mv android_kernel_modules_oppo_mtk5g/* ./
         cp -r vendor /$GITHUB_WORKSPACE/kernel_workspace/android-kernel/
-        cp -r vendor/oplus/kernel_4.14/audio /$GITHUB_WORKSPACE/kernel_workspace/android-kernel/sound/soc/codecs
+        
       
     - name: 开启KVM配置
       if: env.ENABLE_KVM == 'true'
