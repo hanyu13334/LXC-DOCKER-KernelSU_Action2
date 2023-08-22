@@ -131,7 +131,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
-        git clone https://github.com/oppo-source/android_kernel_modules_oppo_mtk5g
+        git clone https://github.com/wu17481748/android_kernel_modules_oppo_mtk5g.git
         mv android_kernel_modules_oppo_mtk5g/* ./
         cp -r vendor /$GITHUB_WORKSPACE/kernel_workspace/android-kernel/
         
