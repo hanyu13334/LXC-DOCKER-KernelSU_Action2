@@ -69,7 +69,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
-        git clone https://ghproxy.com/github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078.git clang-aosp
+        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${{ env.CLANG_BRANCH }}/clang-${{ env.CLANG_VERSION }}.tar.gz
+        tar -C clang-aosp/ -zxvf clang-${{ env.CLANG_VERSION }}.tar.gz
 
     - name: 下载Gcc-aosp编译器
       if: env.METHOD_OK == 'A'
